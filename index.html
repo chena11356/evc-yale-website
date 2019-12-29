@@ -8,7 +8,7 @@
   <meta name="description" content="">
   <meta name="author" content="">
 
-  <title>Stylish Portfolio - Start Bootstrap Template</title>
+  <title>Every Vote Counts @ Yale</title>
 
   <!-- Bootstrap Core CSS -->
   <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -19,7 +19,7 @@
   <link href="vendor/simple-line-icons/css/simple-line-icons.css" rel="stylesheet">
 
   <!-- Custom CSS -->
-  <link href="css/stylish-portfolio.min.css" rel="stylesheet">
+  <link href="css/stylish-portfolio.css" rel="stylesheet">
 
 </head>
 
@@ -32,19 +32,22 @@
   <nav id="sidebar-wrapper">
     <ul class="sidebar-nav">
       <li class="sidebar-brand">
-        <a class="js-scroll-trigger" href="#page-top">Start Bootstrap</a>
+        <a class="js-scroll-trigger" href="#page-top">EVC @ Yale</a>
       </li>
       <li class="sidebar-nav-item">
         <a class="js-scroll-trigger" href="#page-top">Home</a>
       </li>
       <li class="sidebar-nav-item">
-        <a class="js-scroll-trigger" href="#about">About</a>
+        <a class="js-scroll-trigger" href="#voting">How to Vote</a>
       </li>
       <li class="sidebar-nav-item">
-        <a class="js-scroll-trigger" href="#services">Services</a>
+        <a class="js-scroll-trigger" href="#learn">Voting FAQ</a>
       </li>
       <li class="sidebar-nav-item">
-        <a class="js-scroll-trigger" href="#portfolio">Portfolio</a>
+        <a class="js-scroll-trigger" href="#join">Join Us</a>
+      </li>
+      <li class="sidebar-nav-item">
+        <a class="js-scroll-trigger" href="#projects">Projects and Resources</a>
       </li>
       <li class="sidebar-nav-item">
         <a class="js-scroll-trigger" href="#contact">Contact</a>
@@ -55,35 +58,108 @@
   <!-- Header -->
   <header class="masthead d-flex">
     <div class="container text-center my-auto">
-      <h1 class="mb-1">Stylish Portfolio</h1>
-      <h3 class="mb-5">
-        <em>A Free Bootstrap Theme by Start Bootstrap</em>
-      </h3>
-      <a class="btn btn-primary btn-xl js-scroll-trigger" href="#about">Find Out More</a>
+      <!-- <h1 class="mb-5"><span class="text-header-red-outline"><span class="text-red">E</span>very</span> <span class="text-header-dark-outline"><span class="text-white-w">V</span>ote</span> <span class="text-header-blue-outline"><span class="text-blue">C</span>ounts @ Yale</span></h1> -->
+      <h1 class="mb-5 text-header-blue-outline">Every Vote Counts @ Yale</h1>
+      <!-- <h3 class="mb-5 text-primary">
+        <em>A <b>student-led, nonpartisan</b> organization dedicated to increasing voter turnout and expanding voter access nationwide.</em>
+      </h3> -->
+      <a class="btn btn-danger btn-xl js-scroll-trigger" href="#voting">I want to vote!&nbsp;&nbsp;</a>
+      <br><br>
+      <a class="btn btn-light btn-xl js-scroll-trigger" href="#learn">I want to learn!</a>
+      <br><br>
+      <a class="btn btn-primary btn-xl js-scroll-trigger" href="#join">I want to join!&nbsp;&nbsp;&nbsp;</a>
     </div>
     <div class="overlay"></div>
   </header>
 
-  <!-- About -->
-  <section class="content-section bg-light" id="about">
+  <!-- Voting -->
+  <section class="content-section bg-red text-white" id="voting">
     <div class="container text-center">
       <div class="row">
-        <div class="col-lg-10 mx-auto">
-          <h2>Stylish Portfolio is the perfect theme for your next project!</h2>
-          <p class="lead mb-5">This theme features a flexible, UX friendly sidebar menu and stock photos from our friends at
-            <a href="https://unsplash.com/">Unsplash</a>!</p>
-          <a class="btn btn-dark btn-xl js-scroll-trigger" href="#services">What We Offer</a>
+        <div class="col-md mx-auto">
+          <h2>Your Personalized Guide to Voting at Yale</h2>
+          <p class="lead">We offer a comprehensive guide to voting for the Yale community. Whether you are trying to register to vote, submit an absentee ballot, or obtain a list of deadlines for your state, we've got you covered. If what you're looking for isn't here, <em>please <a class="text-secondary js-scroll-trigger" href="#contact">contact us</a>!</em> We do not store any of your information.</p>
+          <p class="lead mb-5">Info info info Info info info Info info info Info info info Info info info Info info info Info info info Info info info Info info info Info info info Info info info Info info info Info info info Info info info Info info info </p>
+        </div>
+        <div class="col-md mx-auto my-auto">
+          <div class="row">
+            <h4 class="mb-4 mx-auto">Select your home state and your goal. We'll walk you through.</h4>
+          </div>
+          <div class="row">
+            <div class="col mx-auto">
+              <div class="btn-group mb-4">
+                <button id="state-button" class="btn btn-light btn-lg dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  Home State
+                </button>
+                <div id="state-dropdown" class="dropdown-menu">
+                  <a class="dropdown-item" href="javascript: void(0)">State 1</a>
+                  <a class="dropdown-item" href="javascript: void(0)">State 2</a>
+                  <a class="dropdown-item" href="javascript: void(0)">State 3</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col mx-auto">
+              <div class="btn-group mb-4">
+                <button id="goal-button" class="btn btn-light btn-lg dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  Goal
+                </button>
+                <div id="goal-dropdown" class="dropdown-menu">
+                  <a class="dropdown-item" href="javascript: void(0)">Register to vote</a>
+                  <a class="dropdown-item" href="javascript: void(0)">Request absentee ballot</a>
+                  <a class="dropdown-item" href="javascript: void(0)">See deadlines for my state</a>
+                  <a class="dropdown-item" href="javascript: void(0)">See who's on my ballot</a>
+                  <a class="dropdown-item" href="javascript: void(0)">See general overview of the process</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col mx-auto">
+              <a class="btn btn-light btn-xl js-scroll-trigger" href="javascript: alert('to be done')">Submit</a>
+            </div>
+          </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Services -->
-  <section class="content-section bg-primary text-white text-center" id="services">
+  <!-- Callout -->
+  <section class="callout" id="learn">
+    <div class="container text-center">
+      <h2 class="mx-auto mb-5">Voting FAQ</h2>
+      <h3 class="mx-auto mb-5 px-5 py-4 speech-bubble-blue-left text-white popup">Why does
+        <em>your</em>
+        vote matter?
+      </h3>
+      <p class="mx-auto mb-5 px-5 py-4 speech-bubble-white-right popup-r">
+        This is why your vote matters!
+      </p>
+      <a class="btn btn-primary btn-xl mb-5 popup-r" href="#TODO">For more info, click here!</a>
+      <h3 class="mx-auto mb-5 px-5 py-4 speech-bubble-red-left text-white popup">But xxx!
+      </h3>
+      <p class="mx-auto mb-5 px-5 py-4 speech-bubble-white-right popup-r">
+        This is why xxx is ok!
+      </p>
+      <a class="btn btn-danger btn-xl mb-5 popup-r" href="#TODO">For more info, click here!</a>
+      <h3 class="mx-auto mb-5 px-5 py-4 speech-bubble-blue-left text-white popup">But xxx!
+      </h3>
+      <p class="mx-auto mb-5 px-5 py-4 speech-bubble-white-right popup-r">
+        This is why xxx is bad!
+      </p>
+      <a class="btn btn-primary btn-xl mb-5 popup-r" href="#TODO">For more info, click here!</a>
+    </div>
+  </section>
+
+  <!-- Join Us! -->
+  <section class="content-section bg-primary text-white text-center" id="join">
     <div class="container">
       <div class="content-section-heading">
-        <h3 class="text-secondary mb-0">Services</h3>
-        <h2 class="mb-5">What We Offer</h2>
+        <h3 class="text-secondary mb-0">Join Us!</h3>
+        <h2 class="mb-5">Who We Are</h2>
       </div>
       <div class="row">
         <div class="col-lg-3 col-md-6 mb-5 mb-lg-0">
@@ -91,18 +167,18 @@
             <i class="icon-screen-smartphone"></i>
           </span>
           <h4>
-            <strong>Responsive</strong>
+            <strong>Our Beliefs</strong>
           </h4>
-          <p class="text-faded mb-0">Looks great on any screen size!</p>
+          <p class="text-faded mb-0">Every Vote Counts is a <b>student-led, nonpartisan</b> organization dedicated to increasing voter turnout and expanding voter access nationwide. Our goal for this semester is to achieve 100% voter turnout in the Yale student body.</p>
         </div>
         <div class="col-lg-3 col-md-6 mb-5 mb-lg-0">
           <span class="service-icon rounded-circle mx-auto mb-3">
             <i class="icon-pencil"></i>
           </span>
           <h4>
-            <strong>Redesigned</strong>
+            <strong>Voting Is a Universal Right</strong>
           </h4>
-          <p class="text-faded mb-0">Freshly redesigned for Bootstrap 4.</p>
+          <p class="text-faded mb-0">We are completely nonpartisan, and we believe everybody who can vote, should vote. We regularly work with the Yale Political Union, Yale College Democrats, and Yale College Republicans.</p>
         </div>
         <div class="col-lg-3 col-md-6 mb-5 mb-md-0">
           <span class="service-icon rounded-circle mx-auto mb-3">
@@ -128,22 +204,12 @@
     </div>
   </section>
 
-  <!-- Callout -->
-  <section class="callout">
-    <div class="container text-center">
-      <h2 class="mx-auto mb-5">Welcome to
-        <em>your</em>
-        next website!</h2>
-      <a class="btn btn-primary btn-xl" href="https://startbootstrap.com/template-overviews/stylish-portfolio/">Download Now!</a>
-    </div>
-  </section>
-
-  <!-- Portfolio -->
-  <section class="content-section" id="portfolio">
+  <!-- Projects and Resources -->
+  <section class="content-section" id="projects">
     <div class="container">
       <div class="content-section-heading text-center">
-        <h3 class="text-secondary mb-0">Portfolio</h3>
-        <h2 class="mb-5">Recent Projects</h2>
+        <h3 class="text-secondary mb-0">Projects and Resources</h3>
+        <h2 class="mb-5">What We Do</h2>
       </div>
       <div class="row no-gutters">
         <div class="col-lg-6">
@@ -194,22 +260,260 @@
     </div>
   </section>
 
-  <!-- Call to Action -->
-  <section class="content-section bg-primary text-white">
+  <!-- Contact Us -->
+  <section class="content-section bg-red text-white" id="contact">
     <div class="container text-center">
-      <h2 class="mb-4">The buttons below are impossible to resist...</h2>
-      <a href="#" class="btn btn-xl btn-light mr-4">Click Me!</a>
-      <a href="#" class="btn btn-xl btn-dark">Look at Me!</a>
-    </div>
-  </section>
+      <div class="row">
+        <div class="col mx-auto">
+          <h2 class="mb-4">Contact Us</h2>
+        </div>
+      </div>
 
-  <!-- Map -->
-  <section id="contact" class="map">
-    <iframe width="100%" height="100%" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=Twitter,+Inc.,+Market+Street,+San+Francisco,+CA&amp;aq=0&amp;oq=twitter&amp;sll=28.659344,-81.187888&amp;sspn=0.128789,0.264187&amp;ie=UTF8&amp;hq=Twitter,+Inc.,+Market+Street,+San+Francisco,+CA&amp;t=m&amp;z=15&amp;iwloc=A&amp;output=embed"></iframe>
-    <br />
-    <small>
-      <a href="https://maps.google.com/maps?f=q&amp;source=embed&amp;hl=en&amp;geocode=&amp;q=Twitter,+Inc.,+Market+Street,+San+Francisco,+CA&amp;aq=0&amp;oq=twitter&amp;sll=28.659344,-81.187888&amp;sspn=0.128789,0.264187&amp;ie=UTF8&amp;hq=Twitter,+Inc.,+Market+Street,+San+Francisco,+CA&amp;t=m&amp;z=15&amp;iwloc=A"></a>
-    </small>
+      <nav id="contact-nav" class="mb-5">
+        <div class="nav nav-tabs mx-auto" id="nav-tab" role="tablist">
+          <a class="nav-item nav-link active text-white" id="nav-general-tab" data-toggle="tab" href="#nav-general" role="tab" aria-controls="nav-general" aria-selected="true">General</a>
+          <a class="nav-item nav-link text-white" id="nav-voter-engagement-tab" data-toggle="tab" href="#nav-voter-engagement" role="tab" aria-controls="nav-voter-engagement" aria-selected="false">Voter Engagement</a>
+          <a class="nav-item nav-link text-white" id="nav-civic-education-tab" data-toggle="tab" href="#nav-civic-education" role="tab" aria-controls="nav-civic-education" aria-selected="false">Civic Education</a>
+          <a class="nav-item nav-link text-white" id="nav-legislative-advocacy-tab" data-toggle="tab" href="#nav-legislative-advocacy" role="tab" aria-controls="nav-legislative-advocacy" aria-selected="false">Legislative Advocacy</a>
+          <a class="nav-item nav-link text-white" id="nav-operations-tab" data-toggle="tab" href="#nav-operations" role="tab" aria-controls="nav-operations" aria-selected="false">Operations</a>
+          <a class="nav-item nav-link text-white" id="nav-website-tab" data-toggle="tab" href="#nav-website" role="tab" aria-controls="nav-website" aria-selected="false">Website</a>
+        </div>
+      </nav>
+      <div class="tab-content" id="nav-tabContent">
+        <div class="tab-pane fade show active" id="nav-general" role="tabpanel" aria-labelledby="nav-general-tab">
+          <div class="row mb-3">
+            <div class="col mx-auto">
+              <img src="img/philip.jpg" class="profile rounded mb-4" alt="Philip Hinkes">
+            </div>
+            <div class="col-6 text-left">
+              <h4>Philip Hinkes</h4>
+              <h5>President</h5>
+              <p>[philip blurb]</p>
+            </div>
+            <div class="col mx-auto">
+              <a href="mailto:philip.hinkes@yale.edu" target="_blank" class="btn btn-xl btn-light mb-2">Contact Philip</a>
+              <a href="mailto:philip.hinkes@yale.edu" target="_blank" class="text-white d-none d-md-block">philip.hinkes@yale.edu</a>
+            </div>
+          </div>
+
+          <div class="row mb-3">
+            <div class="col mx-auto">
+              <img src="img/saul.jpg" class="profile rounded mb-4" alt="Saul Roselaar">
+            </div>
+            <div class="col-6 text-left">
+              <h4>Saul Roselaar</h4>
+              <h5>Vice President</h5>
+              <p>[saul blurb]</p>
+            </div>
+            <div class="col mx-auto">
+              <a href="mailto:saul.roselaar@yale.edu" target="_blank" class="btn btn-xl btn-light mb-2">Contact Saul</a>
+              <a href="mailto:saul.roselaar@yale.edu" target="_blank" class="text-white d-none d-md-block">saul.roselaar@yale.edu</a>
+            </div>
+          </div>
+
+          <div class="row mb-3">
+            <div class="col mx-auto">
+              <img src="img/general.jpg" class="profile rounded mb-4" alt="EVC Central">
+            </div>
+            <div class="col-6 text-left">
+              <h4>EVC Central Email</h4>
+              <h5>General Concerns</h5>
+              <p>[general blurb]</p>
+            </div>
+            <div class="col mx-auto">
+              <a href="mailto:yale@evcnational.org" target="_blank" class="btn btn-xl btn-light mb-2">Contact Us</a>
+              <a href="mailto:yale@evcnational.org" target="_blank" class="text-white d-none d-md-block">yale@evcnational.org</a>
+            </div>
+          </div>
+        </div>
+        <div class="tab-pane fade" id="nav-voter-engagement" role="tabpanel" aria-labelledby="nav-voter-engagement-tab">
+          <div class="row mb-3">
+            <div class="col mx-auto">
+              <img src="img/jonathan.jpg" class="profile rounded mb-4" alt="Jonathan Schwartz">
+            </div>
+            <div class="col-6 text-left">
+              <h4>Jonathan Schwartz</h4>
+              <h5>Voter Engagement Director</h5>
+              <p>[jonathan blurb]</p>
+            </div>
+            <div class="col mx-auto">
+              <a href="mailto:jonathan.schwartz@yale.edu" target="_blank" class="btn btn-xl btn-light mb-2">Contact Jonathan</a>
+              <a href="mailto:jonathan.schwartz@yale.edu" target="_blank" class="text-white d-none d-md-block">jonathan.schwartz@yale.edu</a>
+            </div>
+          </div>
+
+          <div class="row mb-3">
+            <div class="col mx-auto">
+              <img src="img/matthew.jpg" class="profile rounded mb-4" alt="Matthew Youkilis">
+            </div>
+            <div class="col-6 text-left">
+              <h4>Matthew Youkilis</h4>
+              <h5>Voter Engagement Coordinator</h5>
+              <p>[matthew blurb]</p>
+            </div>
+            <div class="col mx-auto">
+              <a href="mailto:matthew.youkilis@yale.edu" target="_blank" class="btn btn-xl btn-light mb-2">Contact Matthew</a>
+              <a href="mailto:matthew,youkilis@yale.edu" target="_blank" class="text-white d-none d-md-block">matthew.youkilis@yale.edu</a>
+            </div>
+          </div>
+        </div>
+        <div class="tab-pane fade" id="nav-civic-education" role="tabpanel" aria-labelledby="nav-civic-education-tab">
+          <div class="row mb-3">
+            <div class="col mx-auto">
+              <img src="img/caroline.jpg" class="profile rounded mb-4" alt="Caroline Bennet">
+            </div>
+            <div class="col-6 text-left">
+              <h4>Caroline Bennet</h4>
+              <h5>Civic Education Director</h5>
+              <p>[caroline blurb]</p>
+            </div>
+            <div class="col mx-auto">
+              <a href="mailto:caroline.bennet@yale.edu" target="_blank" class="btn btn-xl btn-light mb-2">Contact Caroline</a>
+              <a href="mailto:caroline.bennet@yale.edu" target="_blank" class="text-white d-none d-md-block">caroline.bennet@yale.edu</a>
+            </div>
+          </div>
+
+          <div class="row mb-3">
+            <div class="col mx-auto">
+              <img src="img/julia.jpg" class="profile rounded mb-4" alt="Julia Bialek">
+            </div>
+            <div class="col-6 text-left">
+              <h4>Julia Bialek</h4>
+              <h5>Civic Education Coordinator</h5>
+              <p>[julia blurb]</p>
+            </div>
+            <div class="col mx-auto">
+              <a href="mailto:julia.bialek@yale.edu" target="_blank" class="btn btn-xl btn-light mb-2">Contact Julia</a>
+              <a href="mailto:julia.bialek@yale.edu" target="_blank" class="text-white d-none d-md-block">julia.bialek@yale.edu</a>
+            </div>
+          </div>
+        </div>
+        <div class="tab-pane fade" id="nav-legislative-advocacy" role="tabpanel" aria-labelledby="nav-legislative-advocacy-tab">
+          <div class="row mb-3">
+            <div class="col mx-auto">
+              <img src="img/bea.jpg" class="profile rounded mb-4" alt="Bea Pickett">
+            </div>
+            <div class="col-6 text-left">
+              <h4>Bea Pickett</h4>
+              <h5>Legislative Advocacy Director</h5>
+              <p>[bea blurb]</p>
+            </div>
+            <div class="col mx-auto">
+              <a href="mailto:bea.pickett@yale.edu" target="_blank" class="btn btn-xl btn-light mb-2">Contact Bea</a>
+              <a href="mailto:bea.pickett@yale.edu" target="_blank" class="text-white d-none d-md-block">bea.pickett@yale.edu</a>
+            </div>
+          </div>
+
+          <div class="row mb-3">
+            <div class="col mx-auto">
+              <img src="img/garrett.jpg" class="profile rounded mb-4" alt="Garrett Frye-Mason">
+            </div>
+            <div class="col-6 text-left">
+              <h4>Garrett Frye-Mason</h4>
+              <h5>Legislative Advocacy Coordinator</h5>
+              <p>[garrett blurb]</p>]
+            </div>
+            <div class="col mx-auto">
+              <a href="mailto:garrett.frye-mason@yale.edu" target="_blank" class="btn btn-xl btn-light mb-2">Contact Garrett</a>
+              <a href="mailto:garrett.frye-mason@yale.edu" target="_blank" class="text-white d-none d-md-block">garrett.frye-mason@yale.edu</a>
+            </div>
+          </div>
+        </div>
+        <div class="tab-pane fade" id="nav-operations" role="tabpanel" aria-labelledby="nav-operations-tab">
+          <div class="row mb-3">
+            <div class="col mx-auto">
+              <img src="img/kara.jpg" class="profile rounded mb-4" alt="Kara O'Rourke">
+            </div>
+            <div class="col-6 text-left">
+              <h4>Kara O'Rourke</h4>
+              <h5>Operations & Finance Director</h5>
+              <p>[kara blurb]</p>
+            </div>
+            <div class="col mx-auto">
+              <a href="mailto:kara.orourke@yale.edu" target="_blank" class="btn btn-xl btn-light mb-2">Contact Kara</a>
+              <a href="mailto:kara.orourke@yale.edu" target="_blank" class="text-white d-none d-md-block">kara.orourke@yale.edu</a>
+            </div>
+          </div>
+
+          <div class="row mb-3">
+            <div class="col mx-auto">
+              <img src="img/zoe.jpg" class="profile rounded mb-4" alt="Zoe Robertson">
+            </div>
+            <div class="col-6 text-left">
+              <h4>Zoe Robertson</h4>
+              <h5>Communications Director</h5>
+              <p>[zoe blurb]</p>
+            </div>
+            <div class="col mx-auto">
+              <a href="mailto:zoe.robertson@yale.edu" target="_blank" class="btn btn-xl btn-light mb-2">Contact Zoe</a>
+              <a href="mailto:zoe.robertson@yale.edu" target="_blank" class="text-white d-none d-md-block">zoe.robertson@yale.edu</a>
+            </div>
+          </div>
+
+          <div class="row mb-3">
+            <div class="col mx-auto">
+              <img src="img/clara.jpg" class="profile rounded mb-4" alt="Clara Lew-Smith">
+            </div>
+            <div class="col-6 text-left">
+              <h4>Clara Lew-Smith</h4>
+              <h5>State of Voting at Yale Report</h5>
+              <p>[clara blurb]</p>
+            </div>
+            <div class="col mx-auto">
+              <a href="mailto:clara.lew-smith@yale.edu" target="_blank" class="btn btn-xl btn-light mb-2">Contact Clara</a>
+              <a href="mailto:clara.lew-smith@yale.edu" target="_blank" class="text-white d-none d-md-block">clara.lew-smith@yale.edu</a>
+            </div>
+          </div>
+        </div>
+        <div class="tab-pane fade" id="nav-website" role="tabpanel" aria-labelledby="nav-website-tab">
+          <div class="row mb-3">
+            <div class="col mx-auto">
+              <img src="img/alex.jpg" class="profile rounded mb-4" alt="Alex Chen">
+            </div>
+            <div class="col-6 text-left">
+              <h4>Alex Chen</h4>
+              <h5>Web Developer</h5>
+              <p>Feel free to contact me if you have any questions about this website!</p>
+            </div>
+            <div class="col mx-auto">
+              <a href="mailto:alex.chen.ac@yale.edu" target="_blank" class="btn btn-xl btn-light mb-3">Contact Alex</a>
+              <a href="mailto:alex.chen.ac@yale.edu" target="_blank" class="text-white d-none d-md-block">alex.chen.ac@yale.edu</a>
+            </div>
+          </div>
+          <div class="row mb-3">
+            <div class="col mx-auto">
+              <img src="img/abby.jpg" class="profile rounded mb-4" alt="Abby Leighton">
+            </div>
+            <div class="col-6 text-left">
+              <h4>Abby Leighton</h4>
+              <h5>Web Researcher</h5>
+              <p>[abby blurb]</p>
+            </div>
+            <div class="col mx-auto">
+              <a href="mailto:abby.leighton@yale.edu" target="_blank" class="btn btn-xl btn-light mb-2">Contact Abby</a>
+              <a href="mailto:abby.leighton@yale.edu" target="_blank" class="text-white d-none d-md-block">abby.leighton@yale.edu</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+      <!-- <a href="#" class="btn btn-xl btn-light mr-4">Click Me!</a>
+      <a href="#" class="btn btn-xl btn-dark">Look at Me!</a> -->
+
+      <!-- E-board, then project directors, then general email -->
+    </div>
   </section>
 
   <!-- Footer -->
@@ -232,7 +536,7 @@
           </a>
         </li>
       </ul>
-      <p class="text-muted small mb-0">Copyright &copy; Your Website 2019</p>
+      <p class="text-muted small mb-0">Copyright &copy; Every Vote Counts 2020</p>
     </div>
   </footer>
 
@@ -249,7 +553,7 @@
   <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
 
   <!-- Custom scripts for this template -->
-  <script src="js/stylish-portfolio.min.js"></script>
+  <script src="js/stylish-portfolio.js"></script>
 
 </body>
 

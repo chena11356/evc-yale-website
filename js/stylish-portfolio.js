@@ -42,23 +42,59 @@
 
 })(jQuery); // End of use strict
 
-// Disable Google Maps scrolling
-// See http://stackoverflow.com/a/25904582/1607849
-// Disable scroll zooming and bind back the click event
-var onMapMouseleaveHandler = function(event) {
-  var that = $(this);
-  that.on('click', onMapClickHandler);
-  that.off('mouseleave', onMapMouseleaveHandler);
-  that.find('iframe').css("pointer-events", "none");
+// Parallax text messages
+// var popups = $('.popup');
+$(window).scroll(function(){
+
+  $(".popup").each(function() {
+    if ($(window).scrollTop() >= $(this).offset().top
+                  + $(this).outerHeight() - window.innerHeight + 100) {
+                  $(this).addClass('popup_show');
+              }
+  });
+
+  $(".popup-r").each(function() {
+    if ($(window).scrollTop() >= $(this).offset().top
+                  + $(this).outerHeight() - window.innerHeight + 100) {
+                  $(this).addClass('popup_show-r');
+              }
+  });
+
+/*
+ 	var show = $(document).scrollTop() / (600);
+    popup.css('opacity', show);
+  */
+
+  //if($(window).scrollTop() > $(document).height()/4){
+  //  console.log($(document).height()/4);
+  //  popup.addClass('popup_show');
+  //};
+
+
+
+          });
+
+// Stop horizontal scroll
+var scrollEventHandler = function()
+{
+  window.scroll(0, window.pageYOffset)
 }
-var onMapClickHandler = function(event) {
-  var that = $(this);
-  // Disable the click handler until the user leaves the map area
-  that.off('click', onMapClickHandler);
-  // Enable scrolling zoom
-  that.find('iframe').css("pointer-events", "auto");
-  // Handle the mouse leave event
-  that.on('mouseleave', onMapMouseleaveHandler);
-}
-// Enable map zooming with mouse scroll when the user clicks the map
-$('.map').on('click', onMapClickHandler);
+
+window.addEventListener("scroll", scrollEventHandler, false);
+
+// Dropdown Menu Functionality
+$(function(){
+
+  $("#state-dropdown .dropdown-item").click(function(){
+
+    $("#state-button").text($(this).text());
+     $("#state-button").val($(this).text());
+  });
+
+  $("#goal-dropdown .dropdown-item").click(function(){
+
+    $("#goal-button").text($(this).text());
+     $("#goal-button").val($(this).text());
+  });
+
+});
