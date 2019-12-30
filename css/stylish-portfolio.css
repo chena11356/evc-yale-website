@@ -123,6 +123,26 @@ h6 {
   padding: 0;
 }
 
+.masthead-v {
+  min-height: 30rem;
+  position: relative;
+  display: table;
+  width: 100%;
+  height: auto;
+  padding-top: 8rem;
+  padding-bottom: 8rem;
+  background-color: #212121;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.masthead-v h2 {
+  font-size: 3rem;
+  margin: 0;
+  padding: 0;
+}
+
 @media (min-width: 992px) {
   .masthead {
     height: 100vh;
@@ -388,6 +408,10 @@ a.text-secondary, a.text-secondary:hover, a.text-secondary:focus, a.text-seconda
 
 .bg-red {
   background-color: #d9234b !important;
+}
+
+.bg-gray {
+  background-color: #212121 !important;
 }
 
 .text-primary {
@@ -801,4 +825,13 @@ a.text-secondary, a.text-secondary:hover, a.text-secondary:focus, a.text-seconda
   height: auto;
   max-height: 300px;
   overflow-x: hidden;
+}
+.invisible-until-load {
+  display: none;
+}
+.invisible-after-load {
+  display: block;
+}
+#evc-logo {
+  display: none;
 }
