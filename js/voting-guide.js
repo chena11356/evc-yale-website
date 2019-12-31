@@ -1,3 +1,9 @@
+// Temporarily prevent scrolling
+$('body').css({'overflow':'hidden'});
+  $(document).bind('scroll',function () {
+       window.scrollTo(0,0);
+});
+// Fetch state and goal from URL
 var url = window.location.href;
 var indexOfState = url.indexOf("?state=");
 var indexOfGoal = url.indexOf("&goal=");
@@ -5,13 +11,13 @@ if (indexOfState<0||indexOfGoal<0){
   throwError();
 }
 else{
-  var state = url.substring(indexOfState+7,indexOfGoal);
+  var state = url.substring(indexOfState+7,indexOfGoal).replace("%20"," ");
   var goal = url.substring(indexOfGoal+6);
   if (!validState(state)||!validGoal(goal)){
     throwError();
   }
   else {
-    loadTransition();
+    loadTransition(state,goal);
   }
 }
 
@@ -29,7 +35,7 @@ function throwError(){
 }
 
 function validState(state){
-  if (state=="Alabama"||state=="Alaska"||state=="Arizona"||state=="Arkansas"||state=="California"||state=="Colorado"||state=="Connecticut"||state=="Delaware"||state=="District%20of%20Columbia"||state=="Florida"||state=="Georgia"||state=="Hawaii"||state=="Idaho"||state=="Illinois"||state=="Indiana"||state=="Iowa"||state=="Kansas"||state=="Kentucky"||state=="Louisiana"||state=="Maine"||state=="Maryland"||state=="Massachusetts"||state=="Michigan"||state=="Minnesota"||state=="Mississippi"||state=="Missouri"||state=="Montana"||state=="Nebraska"||state=="Nevada"||state=="New%20Hampshire"||state=="New%20Jersey"||state=="New%20Mexico"||state=="New%20York"||state=="North%20Carolina"||state=="North%20Dakota"||state=="Ohio"||state=="Oklahoma"||state=="Oregon"||state=="Pennsylvania"||state=="Rhode%20Island"||state=="South%20Carolina"||state=="South%20Dakota"||state=="Tennessee"||state=="Texas"||state=="Utah"||state=="Vermont"||state=="Virginia"||state=="Washington"||state=="West%20Virginia"||state=="Wisconsin"||state=="Wyoming") {
+  if (state=="Alabama"||state=="Alaska"||state=="Arizona"||state=="Arkansas"||state=="California"||state=="Colorado"||state=="Connecticut"||state=="Delaware"||state=="District of Columbia"||state=="Florida"||state=="Georgia"||state=="Hawaii"||state=="Idaho"||state=="Illinois"||state=="Indiana"||state=="Iowa"||state=="Kansas"||state=="Kentucky"||state=="Louisiana"||state=="Maine"||state=="Maryland"||state=="Massachusetts"||state=="Michigan"||state=="Minnesota"||state=="Mississippi"||state=="Missouri"||state=="Montana"||state=="Nebraska"||state=="Nevada"||state=="New Hampshire"||state=="New Jersey"||state=="New Mexico"||state=="New York"||state=="North Carolina"||state=="North Dakota"||state=="Ohio"||state=="Oklahoma"||state=="Oregon"||state=="Pennsylvania"||state=="Rhode Island"||state=="South Carolina"||state=="South Dakota"||state=="Tennessee"||state=="Texas"||state=="Utah"||state=="Vermont"||state=="Virginia"||state=="Washington"||state=="West Virginia"||state=="Wisconsin"||state=="Wyoming") {
     return true;
   }
   else {
@@ -46,28 +52,67 @@ function validGoal(goal){
   }
 }
 
-function loadTransition(){
+function loadTransition(state,goal){
   setTimeout(function(){
     // Fade the #loading-caption and #loading-gif
     $("#loading-caption").fadeOut(400);
     $("#loading-gif").fadeOut(400, function(){
       // Then make them disappear
-      document.getElementById("loading-caption").style.display="none";
-      document.getElementById("loading-gif").style.display="none";
+      document.getElementById("loading-caption").remove();
+      document.getElementById("loading-gif").remove();
       // Then bring up the EVC logo
       setTimeout(function(){
         $("#evc-logo").fadeIn(1250, function(){
           setTimeout(function(){
             $("#evc-logo").fadeOut(1250, function(){
-              document.getElementById("menu-toggler").style.display = "block";
-              // TO-DO: Load everything else
+              // menu-toggle not needed yet
+              // document.getElementById("menu-toggler").style.display = "block";
+              $(document).unbind('scroll');
+              $('body').css({'overflow':'visible'});
+              switch(goal){
+                case "Register%20to%20vote":
+                  loadRegisterToVote(state);
+                  break;
+                case "Request%20absentee%20ballot":
+                  alert('Goal is absentee');
+                  break;
+                case "See%20deadlines%20for%20my%20state":
+                  alert('Goal is deadlines');
+                  break;
+                case "See%20who%27s%20on%20my%20ballot":
+                  alert('Goal is ballot');
+                  break;
+                case "See%20general%20overview%20of%20the%20process":
+                  alert('Goal is general overview');
+                  break;
+                default:
+                  throwError();
+                  break;
+              }
             });
           }, 500);
         });
       }, 500);
     });
   }, 500);
+}
 
-
-
+// TO-DO: Add a little blurb about being registered in two states
+function loadRegisterToVote(state){
+  // Hide the loading stuff
+  document.getElementById("loading-masthead").remove();
+  // If state is not Connecticut, ask where to register, otherwise skip this step
+  if (state!="Connecticut"){
+    // Change the first instruction
+    document.getElementById("ins-1").innerHTML = "Where would you like to register to vote?";
+    // Change the button of the home state
+    document.getElementById("ins-1-btn-a").innerHTML = state;
+    // Show the content
+    document.getElementById("content-header").style.display = "block";
+    $("#ins-1").fadeIn(750, function(){
+      $("#ins-1-btn-a").fadeIn(750, function(){
+        $("#ins-1-btn-b").fadeIn(750);
+      });
+    });
+  }
 }

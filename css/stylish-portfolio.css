@@ -826,12 +826,9 @@ a.text-secondary, a.text-secondary:hover, a.text-secondary:focus, a.text-seconda
   max-height: 300px;
   overflow-x: hidden;
 }
-.invisible-until-load {
+.invisible-until-load, #evc-logo, #content-header, #ins-1, #ins-1-btn-a, #ins-1-btn-b {
   display: none;
 }
 .invisible-after-load {
   display: block;
-}
-#evc-logo {
-  display: none;
 }
