@@ -67,8 +67,6 @@ function loadTransition(state,goal){
             $("#evc-logo").fadeOut(1250, function(){
               // menu-toggle not needed yet
               // document.getElementById("menu-toggler").style.display = "block";
-              $(document).unbind('scroll');
-              $('body').css({'overflow':'visible'});
               switch(goal){
                 case "Register%20to%20vote":
                   loadRegisterToVote(state);
@@ -116,3 +114,19 @@ function loadRegisterToVote(state){
     });
   }
 }
+
+function loadRegisterToVoteHelper(res){
+  if (res=="Home"){
+    alert("User wants to register to vote in "+state);
+  }
+  else if (res=="Connecticut"){
+    alert("User wants to register to vote in Connecticut");
+  }
+  else{
+    throwError();
+  }
+}
+
+// Don't allow scrolling just yet
+// $(document).unbind('scroll');
+// $('body').css({'overflow':'visible'});

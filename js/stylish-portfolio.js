@@ -124,3 +124,63 @@ $(function(){
   });
 
 });
+
+function loadDialogVoterEngagement(){
+  bootbox.alert({
+    message: "<h3>Voter Engagement</h3><p>[information]</p>",
+    size: 'large'
+  }).find('.modal-content').css({
+  'margin-top': function (){
+      var w = $( window ).height();
+      var b = $(".modal-dialog").height();
+      // should not be (w-h)/2
+      var h = (w-b)/3;
+      return h+"px";
+  }
+  });
+}
+
+function loadDialogCivicEducation(){
+  bootbox.alert({
+    message: "<h3>Civic Education</h3><p>[information]</p>",
+    size: 'large'
+  }).find('.modal-content').css({
+  'margin-top': function (){
+      var w = $( window ).height();
+      var b = $(".modal-dialog").height();
+      // should not be (w-h)/2
+      var h = (w-b)/3;
+      return h+"px";
+  }
+  });
+}
+
+function loadDialogLegislativeAdvocacy(){
+  bootbox.alert({
+    message: "<h3>Legislative Advocacy</h3><p>[information]</p>",
+    size: 'large'
+  }).find('.modal-content').css({
+  'margin-top': function (){
+      var w = $( window ).height();
+      var b = $(".modal-dialog").height();
+      // should not be (w-h)/2
+      var h = (w-b)/3;
+      return h+"px";
+  }
+  });
+}
+
+function loadDialogStateOfVoting(){
+  bootbox.alert({
+    message: "<h3>State of Voting at Yale Report</h3><p>[information]</p>",
+    size: 'large'
+  }).find('.modal-content').css({
+  'margin-top': function (){
+      var w = $( window ).height();
+      var b = $(".modal-dialog").height();
+      // should not be (w-h)/2
+      var h = (w-b)/3;
+      return h+"px";
+  }
+  });
+}

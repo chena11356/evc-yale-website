@@ -832,3 +832,6 @@ a.text-secondary, a.text-secondary:hover, a.text-secondary:focus, a.text-seconda
 .invisible-after-load {
   display: block;
 }
+#scroll-to-top {
+  opacity: 0;
+}
