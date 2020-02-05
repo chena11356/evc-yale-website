@@ -118,7 +118,7 @@ $(function(){
     else {
       state = $("#state-button").text().trim();
       goal = $("#goal-button").text().trim();
-      newWindow = window.open("voting?state="+state+"&goal="+goal,"_self");
+      newWindow = window.open("voting/index.html?state="+state+"&goal="+goal,"_blank");
       newWindow.focus();
     }
   });
@@ -127,7 +127,7 @@ $(function(){
 
 function loadDialogVoterEngagement(){
   bootbox.alert({
-    message: "<h3>Voter Engagement</h3><p>[information]</p>",
+    message: "<div class='mx-3 my-3'><h3>Voter Engagement</h3><p>[information]</p></div>",
     size: 'large'
   }).find('.modal-content').css({
   'margin-top': function (){
@@ -142,7 +142,7 @@ function loadDialogVoterEngagement(){
 
 function loadDialogCivicEducation(){
   bootbox.alert({
-    message: "<h3>Civic Education</h3><p>[information]</p>",
+    message: "<div class='mx-3 my-3'><h3>Civic Education</h3><p>[information]</p></div>",
     size: 'large'
   }).find('.modal-content').css({
   'margin-top': function (){
@@ -157,7 +157,7 @@ function loadDialogCivicEducation(){
 
 function loadDialogLegislativeAdvocacy(){
   bootbox.alert({
-    message: "<h3>Legislative Advocacy</h3><p>[information]</p>",
+    message: "<div class='mx-3 my-3'><h3>Legislative Advocacy</h3><p>[information]</p></div>",
     size: 'large'
   }).find('.modal-content').css({
   'margin-top': function (){
@@ -172,7 +172,7 @@ function loadDialogLegislativeAdvocacy(){
 
 function loadDialogStateOfVoting(){
   bootbox.alert({
-    message: "<h3>State of Voting at Yale Report</h3><p>[information]</p>",
+    message: "<div class='mx-3 my-3'><h3>State of Voting at Yale Report</h3><p>[information]</p></div>",
     size: 'large'
   }).find('.modal-content').css({
   'margin-top': function (){
