@@ -170,9 +170,9 @@ function loadDialogLegislativeAdvocacy(){
   });
 }
 
-function loadDialogStateOfVoting(){
+function loadDialogCensus(){
   bootbox.alert({
-    message: "<div class='mx-3 my-3'><h3>State of Voting at Yale Report</h3><p>[information]</p></div>",
+    message: "<div class='mx-3 my-3'><h3>Census Outreach</h3><p>[information]</p></div>",
     size: 'large'
   }).find('.modal-content').css({
   'margin-top': function (){
